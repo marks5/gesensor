@@ -59,8 +59,32 @@ const MyMapComponent = compose(
                     {props.selectedPlace === i && <InfoWindow onCloseClick={props.onToggleOpen}>
                         <div style={{fontSize: 16}}>
                             {props.places[props.selectedPlace].name}
-                            <div>Status: Gerador</div>
-                            <div>Diesel: 89%</div>
+                            {console.log(i)}
+                            {(() => {
+                              switch (i%2) {
+                                case 0:   return (
+                                  <>
+                                  <div>Status: Gerador Ativado</div>
+                                  <div>Diesel: 89%</div>
+                                  <div>12 minutos sem rede elétrica</div>
+                                  </>
+                                  );
+                                case 1:   return (
+                                  <>
+                                  <div>Status: Energia Ativada</div>
+                                  <div>Diesel: 54%</div>
+                                  <div>Rede elétrica normal</div>
+                                  </>
+                                  );
+                                default:  return (
+                                  <>
+                                  <div>Status: Gerador Ativador</div>
+                                  <div>Diesel: 89%</div>
+                                  <div>15 minutos sem rede elétrica</div>
+                                  </>
+                                  );
+                              }
+                            })()}
                         </div>
                     </InfoWindow>}
                 </Marker>

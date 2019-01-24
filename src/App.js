@@ -66,6 +66,7 @@ const MyMapComponent = compose(
                                   <>
                                   <div>Status: Gerador Ativado</div>
                                   <div>Diesel: 89%</div>
+                                  <div style={{color: 'red'}}>Diesel perto do vencimento ~26/01</div>
                                   <div>12 minutos sem rede elétrica</div>
                                   </>
                                   );
@@ -73,6 +74,7 @@ const MyMapComponent = compose(
                                   <>
                                   <div>Status: Energia Ativada</div>
                                   <div>Diesel: 54%</div>
+                                  <div style={{color: 'green'}}>Diesel vence em ~26/03</div>
                                   <div>Rede elétrica normal</div>
                                   </>
                                   );
